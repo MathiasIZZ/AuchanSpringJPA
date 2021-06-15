@@ -28,7 +28,7 @@ public class ClientController implements Serializable {
      @GetMapping("{id}")
      public Optional<Client> findById(@PathVariable int id) {
 
-        return this.service.getById(id);
+        return this.service.findById(id);
      }
 
 

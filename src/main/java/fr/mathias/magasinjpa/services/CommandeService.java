@@ -7,6 +7,7 @@ import fr.mathias.magasinjpa.repositories.CommandeRepository;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
+import java.util.Optional;
 
 public class CommandeService {
 
@@ -21,5 +22,10 @@ public class CommandeService {
         return this.repository.findAll();
     }
 
+    public List<Optional<Commande>> findAllCommandesFromClient(int id) {
 
-}
+        return this.repository.findById(id);
+    }
+
+
+

@@ -38,7 +38,7 @@ public class ClientService {
 
 
 
-    public Optional<Client> getById(int id) {
+    public Optional<Client> findById(int id) {
 
         return this.repository.findById(id);
     }
