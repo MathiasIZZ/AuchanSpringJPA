@@ -7,6 +7,7 @@ import fr.mathias.magasinjpa.repositories.ClientRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ClientService {
 
@@ -30,6 +31,18 @@ public class ClientService {
         });
         return getClientsDTO;
     }
+
+    public Client save(Client client) {
+        return this.repository.save(client);
+    }
+
+
+
+    public Optional<Client> getById(int id) {
+
+        return this.repository.findById(id);
+    }
+
 
 
 
