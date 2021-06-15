@@ -1,7 +1,8 @@
 package fr.mathias.magasinjpa.controllers;
 
-import fr.mathias.magasinjpa.dtos.GetClientDTO;
-import fr.mathias.magasinjpa.services.ClientService;
+
+import fr.mathias.magasinjpa.models.Produit;
+import fr.mathias.magasinjpa.services.ProduitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,25 +13,17 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("clients")
-public class ClientController {
+@RequestMapping("produits")
+public class ProduitController {
 
     @Autowired
-    ClientService service;
+    ProduitService service;
 
     @GetMapping
-    public List<GetClientDTO> findAll() {
+    public List<Produit> findAll() {
 
         return this.service.findAll();
     }
-
-
-
-
-
-
-
-
 
 
 

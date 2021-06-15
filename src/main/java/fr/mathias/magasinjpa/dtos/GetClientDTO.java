@@ -11,4 +11,10 @@ public class GetClientDTO {
     private String prenom;
 
 
+
+
+
+
+
+
 }
